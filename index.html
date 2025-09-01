@@ -3,93 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ching Ching Buddy</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Ching Ching Buddy - Your Partner in Loans</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="website-header">
-      <img
-        src="images/chingchinglogo-nobg.png"
-        class="logo-image"
-        alt="chingchingbuddy-logo"
-      />
-      <h1 class="website-description">Loan Calculator</h1>
+    <header class="header">
+      <div class="header-container">
+        <a href="#" class="logo">Ching Ching Buddy</a>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#calculator">Calculator</a>
+          <a href="#" class="button apply-button-header">Apply Now</a>
+        </nav>
+      </div>
     </header>
-    <main class="calculator-container">
-      <section class="loan-input-variables">
-        <div class="loan-amount-input">
-          <p class="loan-input-title">Loan Amount</p>
-          <p class="input-variable">R1 000</p>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            class="amount-range"
-          />
-          <div class="amount-variables">
-            <span>R1 000</span>
-            <span>R100 000</span>
-          </div>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <h1>Flexible Loans for Your Dreams</h1>
+          <p>
+            We provide smart financial solutions with personal and business
+            loans tailored to your needs. Get a quick estimate below!
+          </p>
+          <a href="#calculator" class="button primary-button"
+            >Calculate Your Loan</a
+          >
         </div>
-        <div class="interest-input">
-          <p class="loan-interest-title">Interest Rate</p>
-          <p class="input-variable">11.5 %</p>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            class="interest-range"
-          />
-          <div class="interest-variables">
-            <span>10.0 %</span>
-            <span>50.0 %</span>
-          </div>
-        </div>
-        <div>
-          <p class="loan-period-title">Loan Period</p>
-          <p class="input-variable">2 Years</p>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            class="period-range"
-          />
-          <div class="period-variables">
-            <span>1 Year</span>
-            <span>50 Years</span>
+      </section>
+
+      <section id="services" class="services-section">
+        <div class="services-container">
+          <h2>Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Personal Loans</h3>
+              <p>
+                Whether it's for a new car, a home renovation, or a special
+                holiday, our personal loans come with competitive interest rates
+                and flexible repayment options.
+              </p>
+              <a href="#" class="button secondary-button">Learn More</a>
+            </div>
+            <div class="service-card">
+              <h3>Business Loans</h3>
+              <p>
+                Fuel your business growth with our tailored business loans. From
+                startups to established enterprises, we offer the capital you
+                need to succeed.
+              </p>
+              <a href="#" class="button secondary-button">Learn More</a>
+            </div>
           </div>
         </div>
       </section>
-      <section class="loan-output-variables">
-        <div class="output-variable-container one">
-          <p class="output-variable-title">Monthly Payment</p>
-          <p class="output-variable">R1 000</p>
-          <p class="output-variable-description">
-            This is your estimated monthly payment
+
+      <section id="calculator" class="calculator-section">
+        <div class="calculator-container">
+          <h2>Loan Calculator</h2>
+          <p class="section-description">
+            Use our tool to estimate your monthly payments and total costs.
           </p>
-        </div>
-        <div class="output-variable-container two">
-          <p class="output-variable-title">Total Interest Paid</p>
-          <p class="output-variable">R2 000</p>
-          <p class="output-variable-description">
-            This is the total interest amount you'll pay over the loan term
-          </p>
-        </div>
-        <div class="output-variable-container">
-          <p class="output-variable-title">Total Amount Paid</p>
-          <p class="output-variable">R3 000</p>
-          <p class="output-variable-description">
-            This is the total amount you'll pay including both loan amount and
-            interest
-          </p>
-        </div>
-        <div class="apply-now-container">
-          <button class="apply-now-button">Apply Now</button>
+          <div class="calculator-grid">
+            <div class="input-card">
+              <label for="loanAmount">Loan Amount</label>
+              <div class="amount-display">
+                R<span id="loanAmountValue">100,000</span>
+              </div>
+              <input
+                type="range"
+                id="loanAmount"
+                min="0"
+                max="1000000"
+                value="100000"
+                step="1000"
+              />
+              <div class="range-labels">
+                <span>R0</span>
+                <span>R1,000,000</span>
+              </div>
+
+              <label for="interestRate">Interest Rate</label>
+              <div class="rate-display">
+                <span id="interestRateValue">5.0</span>%
+              </div>
+              <input
+                type="range"
+                id="interestRate"
+                min="1.0"
+                max="15.0"
+                value="5.0"
+                step="0.1"
+              />
+              <div class="range-labels">
+                <span>1.0%</span>
+                <span>15.0%</span>
+              </div>
+
+              <label for="loanPeriod">Loan Period</label>
+              <div class="period-display">
+                <span id="loanPeriodValue">30</span> Years
+              </div>
+              <input
+                type="range"
+                id="loanPeriod"
+                min="5"
+                max="40"
+                value="30"
+                step="1"
+              />
+              <div class="range-labels">
+                <span>5 Years</span>
+                <span>40 Years</span>
+              </div>
+            </div>
+
+            <div class="output-card">
+              <div class="output-item">
+                <p>Monthly Payment</p>
+                <h2 id="monthlyPayment">R537</h2>
+                <p class="description">
+                  This is your estimated monthly payment.
+                </p>
+              </div>
+              <div class="output-item">
+                <p>Total Interest Paid</p>
+                <h2 id="totalInterestPaid">R93,255</h2>
+                <p class="description">
+                  This is the total amount of interest you'll pay over the loan
+                  term.
+                </p>
+              </div>
+              <div class="output-item">
+                <p>Total Amount Paid</p>
+                <h2 id="totalAmountPaid">R193,255</h2>
+                <p class="description">
+                  This is the total amount you'll pay including both the loan
+                  amount and interest.
+                </p>
+              </div>
+              <p class="need-info">Ready to take the next step?</p>
+              <a href="#" class="button apply-button">Apply Now</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Ching Ching Buddy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

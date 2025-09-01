@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #28303d;
+  --background-light: #f0f2f5;
+  --text-dark: #333;
+  --text-light: #fff;
+  --card-background: #f9f9f9;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-light);
+  margin: 0;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Updated .logo and added .logo-image styling */
+.logo {
+  display: flex; /* Use flex to align logo image */
+  align-items: center;
+  height: 50px; /* Give the logo container a fixed height */
+  text-decoration: none; /* Remove underline if any */
+}
+
+.logo-image {
+  max-height: 100%; /* Make sure image doesn't exceed container height */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 200px; /* Set a maximum width for the logo */
+}
+
+.nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.button {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.secondary-button {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.secondary-button:hover {
+  background-color: #1a1e26;
+}
+
+.apply-button-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.apply-button-header:hover {
+  background-color: #0056b3;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-section {
+  padding-top: 150px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.services-section {
+  background-color: var(--background-light);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background-color: var(--text-light);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.calculator-section {
+  background-color: var(--text-light);
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.calculator-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  text-align: left;
+}
+
+.input-card,
+.output-card {
+  background-color: var(--card-background);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.output-card {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-card label {
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  font-weight: 500;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.amount-display,
+.rate-display,
+.period-display {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.rate-display,
+.period-display {
+  font-size: 1.8em;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.output-item {
+  margin-bottom: 25px;
+}
+
+.output-item p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.output-item h2 {
+  margin: 5px 0 5px 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.output-item .description {
+  font-size: 0.8em;
+  color: #999;
+  line-height: 1.4;
+}
+
+.need-info {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.apply-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.apply-button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  color: #999;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav {
+    margin-top: 15px;
+  }
+  .nav a {
+    margin: 0 10px;
+  }
+  .calculator-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .amount-display,
+  .rate-display,
+  .period-display {
+    font-size: 1.8em;
+  }
+  .output-item h2 {
+    font-size: 2em;
+  }
+  /* Responsive adjustment for logo */
+  .logo-image {
+    max-width: 150px; /* Smaller max-width on mobile */
+  }
+}
