@@ -32,8 +32,8 @@ body {
 
 /* Whole calculator */
 .calculator-container {
-  display: flex;
-  width: 900px;
+  /* display: flex; */
+  width: 500px;
   /* align-items: center; */
   /* align-content: center;
   justify-content: center; */
@@ -101,6 +101,7 @@ body {
   background: rgb(17, 23, 79);
   border-radius: 10px;
   padding: 25px;
+    margin-left: 20px;
 }
 
 .output-variable {
@@ -125,7 +126,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .calculator-container {
     display: flex;
     flex-direction: column;
@@ -138,4 +139,4 @@ body {
     width: 800px;
     align-content: center;
   } */
-}
+} */
