@@ -47,7 +47,7 @@ body {
 .logo-image {
   max-height: 100%; /* Make sure image doesn't exceed container height */
   width: auto; /* Maintain aspect ratio */
-  max-width: 200px; /* Set a maximum width for the logo */
+  max-width: 290px; /* Set a maximum width for the logo */
 }
 
 .nav a {
